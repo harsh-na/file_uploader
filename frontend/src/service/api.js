@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URI = "";
+const API_URI = "https://famous-tan-knickers.cyclic.cloud/";
 
 export const uploadFile = async (data) => {
   try {
