@@ -3,7 +3,9 @@ import router from './routes/routes.js';
 import cors from 'cors';
 import DBConnection from './database/db.js'
 import path from 'path';
+import dotenv from 'dotenv';
 
+dotenv.config();
 const __dirname=path.resolve();
 
 const app = express();
