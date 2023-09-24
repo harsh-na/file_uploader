@@ -14,7 +14,7 @@ export const uploadImage = async (request, response) => {
     response
       .status(200)
       .json({
-        path: `https://famous-tan-knickers.cyclic.cloud/:${process.env.PORT}/file/${file._id}`,
+        path: `https://famous-tan-knickers.cyclic.cloud/file/${file._id}`,
       });
   } catch (error) {
     console.error(error.message);
