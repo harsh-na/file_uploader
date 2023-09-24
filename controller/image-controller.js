@@ -4,6 +4,8 @@ import dotenv from "dotenv";
 dotenv.config();
 
 export const uploadImage = async (request, response) => {
+
+  console.log(req.file)
   const fileObj = {
     path: request.file.path,
     name: request.file.originalname,
@@ -11,11 +13,9 @@ export const uploadImage = async (request, response) => {
 
   try {
     const file = await File.create(fileObj);
-    response
-      .status(200)
-      .json({
-        path: `https://famous-tan-knickers.cyclic.cloud/file/${file._id}`,
-      });
+    response.status(200).json({
+      path: `${process.env.BASE_URL}/file/${file._id}`,
+    });
   } catch (error) {
     console.error(error.message);
     response.status(500).json({ error: error.message });
