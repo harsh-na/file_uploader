@@ -14,7 +14,7 @@ export const uploadImage = async (request, response) => {
   try {
     const file = await File.create(fileObj);
     response.status(200).json({
-      path: `${process.env.BASE_URL}/file/${file._id}`,
+      path: `https://famous-tan-knickers.cyclic.cloud/file/${file._id}`,
     });
   } catch (error) {
     console.error(error.message);
